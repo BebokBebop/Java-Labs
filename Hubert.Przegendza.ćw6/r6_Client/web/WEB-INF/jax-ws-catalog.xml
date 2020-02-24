@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/r6_WebService/DBManagement?wsdl" uri="src/conf/xml-resources/web-service-references/DBManagement/wsdl/localhost_8080/r6_WebService/DBManagement.wsdl"/>
+    <system systemId="http://localhost:8080/r6_WebService/DBManagement?xsd=1" uri="src/conf/xml-resources/web-service-references/DBManagement/wsdl/localhost_8080/r6_WebService/DBManagement.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/r6_WebService/BTGWebService?wsdl" uri="wsdl/localhost_8080/r6_WebService/BTGWebService.wsdl"/>
+    <system systemId="http://localhost:8080/r6_WebService/BTGWebService?xsd=1" uri="wsdl/localhost_8080/r6_WebService/BTGWebService.xsd_1.xsd"/>
+</catalog>

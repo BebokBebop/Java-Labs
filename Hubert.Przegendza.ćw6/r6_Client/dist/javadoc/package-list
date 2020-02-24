@@ -1,0 +1,11 @@
+pl.polsl.lab.servlets.calculate
+pl.polsl.lab.servlets.login
+pl.polsl.lab.servlets.logout
+pl.polsl.lab.servlets.main.page
+pl.polsl.lab.servlets.register
+pl.polsl.lab.servlets.unregister
+pl.polsl.lab.servlets.view.calculations
+pl.polsl.lab.servlets.view.history
+pl.polsl.lab.servlets.view.results
+pl.polsl.lab.servlets.view.users
+pl.polsl.lab.web.services.reference

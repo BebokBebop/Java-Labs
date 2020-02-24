@@ -1,0 +1,8 @@
+pl.polsl.lab.server
+pl.polsl.lab.server.annotations
+pl.polsl.lab.server.communication
+pl.polsl.lab.server.controller
+pl.polsl.lab.server.exceptions
+pl.polsl.lab.server.model
+pl.polsl.lab.server.service.controller
+pl.polsl.lab.server.view

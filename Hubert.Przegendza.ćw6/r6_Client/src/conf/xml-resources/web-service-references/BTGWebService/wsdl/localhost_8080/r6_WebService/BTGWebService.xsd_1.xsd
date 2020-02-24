@@ -1,0 +1,178 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://services.web.lab.polsl.pl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.web.lab.polsl.pl/">
+
+<xs:element name="CalculateBergerTable" type="tns:CalculateBergerTable"/>
+
+<xs:element name="CalculateBergerTableResponse" type="tns:CalculateBergerTableResponse"/>
+
+<xs:element name="MyException" type="tns:MyException"/>
+
+<xs:element name="WSException" type="tns:WSException"/>
+
+<xs:element name="checkLogin" type="tns:checkLogin"/>
+
+<xs:element name="checkLoginResponse" type="tns:checkLoginResponse"/>
+
+<xs:element name="getCalculationList" type="tns:getCalculationList"/>
+
+<xs:element name="getCalculationListResponse" type="tns:getCalculationListResponse"/>
+
+<xs:element name="getHistoryList" type="tns:getHistoryList"/>
+
+<xs:element name="getHistoryListResponse" type="tns:getHistoryListResponse"/>
+
+<xs:element name="getResultList" type="tns:getResultList"/>
+
+<xs:element name="getResultListResponse" type="tns:getResultListResponse"/>
+
+<xs:element name="getUserList" type="tns:getUserList"/>
+
+<xs:element name="getUserListResponse" type="tns:getUserListResponse"/>
+
+<xs:element name="register" type="tns:register"/>
+
+<xs:element name="registerResponse" type="tns:registerResponse"/>
+
+<xs:element name="unRegister" type="tns:unRegister"/>
+
+<xs:element name="unRegisterResponse" type="tns:unRegisterResponse"/>
+
+<xs:complexType name="getUserList">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getUserListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:userList" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="userList">
+<xs:sequence>
+<xs:element name="ID" type="xs:string" minOccurs="0"/>
+<xs:element name="login" type="xs:string" minOccurs="0"/>
+<xs:element name="noOfCalcs" type="xs:int"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="WSException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="MyException">
+<xs:sequence>
+<xs:element name="message" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkLogin">
+<xs:sequence>
+<xs:element name="login" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkLoginResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CalculateBergerTable">
+<xs:sequence>
+<xs:element name="teamCount" type="xs:int" minOccurs="0"/>
+<xs:element name="userName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="CalculateBergerTableResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:btResultRow" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="btResultRow">
+<xs:sequence>
+<xs:element name="result" type="xs:int" nillable="true" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="register">
+<xs:sequence>
+<xs:element name="login" type="xs:string" minOccurs="0"/>
+<xs:element name="password" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCalculationList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getCalculationListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:calculationList" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="calculationList">
+<xs:sequence>
+<xs:element name="argument" type="xs:int" minOccurs="0"/>
+<xs:element name="ID" type="xs:string" minOccurs="0"/>
+<xs:element name="user" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getHistoryList">
+<xs:sequence>
+<xs:element name="userName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getHistoryListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:history" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="history">
+<xs:sequence>
+<xs:element name="argument" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unRegister">
+<xs:sequence>
+<xs:element name="login" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="unRegisterResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getResultList">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getResultListResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:resultList" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="resultList">
+<xs:sequence>
+<xs:element name="argument" type="xs:string" minOccurs="0"/>
+<xs:element name="noOfCalcs" type="xs:int"/>
+<xs:element name="result" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

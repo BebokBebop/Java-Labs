@@ -1,0 +1,8 @@
+pl.polsl.lab.annotations
+pl.polsl.lab.entities.calculation
+pl.polsl.lab.entities.result
+pl.polsl.lab.entities.user
+pl.polsl.lab.exceptions
+pl.polsl.lab.model
+pl.polsl.lab.send.types
+pl.polsl.lab.web.services
